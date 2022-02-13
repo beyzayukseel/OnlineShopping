@@ -8,10 +8,10 @@ import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Builder
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 @Entity
 public class User {
 
@@ -29,6 +29,5 @@ public class User {
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Role> roles;
-
 
 }

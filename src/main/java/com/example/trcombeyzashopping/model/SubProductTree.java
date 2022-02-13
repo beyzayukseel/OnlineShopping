@@ -3,10 +3,7 @@ package com.example.trcombeyzashopping.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Setter
 @Getter
@@ -18,4 +15,8 @@ public class SubProductTree {
     private Long id;
 
     private Integer amount;
+
+    @OneToOne(cascade=CascadeType.ALL)
+    @JoinColumn(name =  "product_id")
+    private Product product;
 }
