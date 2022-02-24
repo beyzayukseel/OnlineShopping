@@ -14,6 +14,7 @@ public class Operation {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
+
     private String operationName;
 
     @OneToOne(fetch = FetchType.LAZY)

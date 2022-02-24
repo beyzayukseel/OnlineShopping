@@ -3,6 +3,7 @@ package com.example.trcombeyzashopping.controller;
 import com.example.trcombeyzashopping.dto.OrderItemDto;
 import com.example.trcombeyzashopping.dto.dtoMapper.OrderItemMapper;
 import com.example.trcombeyzashopping.model.OrderItem;
+import com.example.trcombeyzashopping.model.Product;
 import com.example.trcombeyzashopping.service.OrderItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -40,6 +41,22 @@ public class OrderItemController {
     private void delOrderItem(@PathVariable Long delId) {
 
           orderItemService.delOrderItem(delId);
-          throw new EmptyResultDataAccessException(1);
+          //throw new EmptyResultDataAccessException(1);
     }
+
+    @GetMapping( "/product/{orderItemId}")
+    private Long getOrderItemProductId(@PathVariable Long orderItemId){
+        return orderItemService.getProductId(orderItemId);
+    }
+
+    @GetMapping( "/getProductIds/{orderId}")
+    private List<Long> getOrderProductIds(@PathVariable Long orderId){
+        return orderItemService.getOrdersProductId(orderId);
+    }
+
+
+
+
+
+
 }

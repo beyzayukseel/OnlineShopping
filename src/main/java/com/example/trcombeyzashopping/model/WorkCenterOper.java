@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-public class WorkCenterOper {
+public class WorkCenterOper{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

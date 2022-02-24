@@ -1,5 +1,6 @@
 package com.example.trcombeyzashopping.dto;
 
+import com.example.trcombeyzashopping.model.Salable;
 import lombok.*;
 
 @Builder
@@ -10,5 +11,5 @@ public class ProductDto {
 
     private String productName;
     private String productType;
-    private String isSalable;
+    private Salable salable;
 }

@@ -15,7 +15,7 @@ public class ProductMapper {
         return ProductDto.builder()
                 .productName(product.getProductName())
                 .productType(product.getProductType())
-                .isSalable(product.getIsSalable())
+                .salable(product.getSalable())
                 .build();
     }
 
@@ -23,7 +23,7 @@ public class ProductMapper {
         return Product.builder()
                 .productName(productDto.getProductName())
                 .productType(productDto.getProductType())
-                .isSalable(productDto.getIsSalable())
+                .salable(productDto.getSalable())
                 .build();
     }
 

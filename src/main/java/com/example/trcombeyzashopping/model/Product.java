@@ -21,8 +21,7 @@ public class Product {
 
     private String productType;
 
-    private String isSalable;
-
-
+    @Enumerated(EnumType.STRING)
+    private Salable salable;
 }
 
