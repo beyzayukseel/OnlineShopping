@@ -1,6 +1,10 @@
 package com.example.trcombeyzashopping.dto;
 
-import lombok.*;
+import com.example.trcombeyzashopping.model.Salable;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Builder
 @Setter
