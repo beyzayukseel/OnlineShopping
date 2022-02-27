@@ -1,9 +1,5 @@
 package com.example.trcombeyzashopping.controller;
 
-import com.example.trcombeyzashopping.dto.WorkCenterDto;
-import com.example.trcombeyzashopping.dto.dtoMapper.WorkCenterMapper;
-import com.example.trcombeyzashopping.model.WorkCenter;
-import com.example.trcombeyzashopping.service.WorkCenterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

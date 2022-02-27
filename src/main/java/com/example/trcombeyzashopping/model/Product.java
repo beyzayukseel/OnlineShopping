@@ -23,5 +23,7 @@ public class Product {
 
     @Enumerated(EnumType.STRING)
     private Salable salable;
+
+    private Integer amount;
 }
 

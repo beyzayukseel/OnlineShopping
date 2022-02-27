@@ -6,9 +6,13 @@ import com.example.trcombeyzashopping.model.Order;
 import com.example.trcombeyzashopping.service.OrderService;
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
+import javax.validation.Valid;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -27,7 +31,7 @@ public class OrderController {
     }
 
     @GetMapping("/{userId}/orders")
-    private ResponseEntity<List<Order>> getAllOrdersByUser(@PathVariable Long userId) {
+    private ResponseEntity<List<Order>> getAllOrdersByUser(@Valid @PathVariable Long userId) throws ChangeSetPersister.NotFoundException {
         System.out.println(userId);
         return ResponseEntity.ok(orderService.findOrdersUser(userId));
     }

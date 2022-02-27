@@ -1,6 +1,5 @@
 package com.example.trcombeyzashopping.dto;
 
-import com.example.trcombeyzashopping.model.Salable;
 import lombok.*;
 
 @Builder
